@@ -788,6 +788,7 @@ html.lenis body {
   height: 120vh;
   background-size: cover;
   width: 100vw;
+  position: relative;
 }
 
 .how_it_works_heading_container {
@@ -879,13 +880,19 @@ html.lenis body {
 .mobile_description_container.visible {
   transform: translateY(0);
 }
+.swiper-pagination-container {
+  bottom: 5%;
+  width: 100%;
+  display: none;
+  position: absolute;
+  left: 0;
+}
 .swiper-pagination {
   width: 100px;
   height: 30px;
-  bottom: 5%;
-  display: none;
   justify-content: space-evenly;
   align-items: center;
+  display: flex;
 }
 .swipper_pagination_dots {
   background-color: rgb(223, 223, 223);
@@ -955,7 +962,7 @@ html.lenis body {
 }
 @media (max-width: 860px) {
   .mobile_section {
-    height: 100vmin;
+    height: 600px;
   }
   .how_it_works_heading_container {
     width: 100%;
@@ -1040,12 +1047,14 @@ html.lenis body {
 }
 
 @media (max-width: 600px) {
-  .mobile_section {
+  /* .mobile_section {
     height: 70vh;
-  }
-  .swiper-pagination {
+  } */
+  .swiper-pagination-container {
     display: flex;
-    top: 65%;
+    align-items: center;
+    justify-content: center;
+    /* top: 65%; */
   }
 
   .mobile_description_container {
@@ -1155,7 +1164,7 @@ html.lenis body {
   }
 
   .swiper-pagination {
-    top: 130%;
+    /* top: 130%; */
   }
 
   .swiper-button-next,
@@ -1194,11 +1203,12 @@ html.lenis body {
 
 .people_are_earning {
   width: 100%;
-  height: 25rem;
+  height: max-content;
   background-image: url(./assets/people_earn_bg.png);
   background-size: cover;
   border-radius: 20px;
   position: relative;
+  padding-bottom: 20px;
 }
 
 .people_earning_heading_container {
@@ -1211,6 +1221,7 @@ html.lenis body {
 .people_earning_heading {
   font-size: 3.5vw;
   color: white;
+  white-space: nowrap;
 }
 
 .people_earning_heading span {
@@ -1223,8 +1234,8 @@ html.lenis body {
   display: flex;
   gap: 2vw;
   width: 250vw;
-  margin: 20px 0;
-  position: absolute;
+  margin: 30px 0;
+  position: relative;
 }
 
 .first_line_animation {
@@ -1233,13 +1244,13 @@ html.lenis body {
 }
 
 .second_line_animation {
-  top: 47.5%;
+  /* top: 47.5%; */
   left: -5%;
   animation: leftAnimation 10s linear infinite;
 }
 
 .third_line_animation {
-  top: 70%;
+  /* top: 70%; */
   left: -45%;
   animation: rightAnimation 10s linear infinite;
 }
@@ -1284,7 +1295,7 @@ html.lenis body {
 }
 
 .first_line_child {
-  width: 310px;
+  width: 300px;
   height: 50px;
   border-radius: 50px;
   box-shadow: 0 0 0 0.2px white;
@@ -1338,12 +1349,14 @@ html.lenis body {
 
 .name {
   font-size: 19px;
+  white-space: nowrap;
+  margin-right: 10px;
 }
 
 .amount_container {
   width: 100px;
   height: 40px;
-  font-size: 1.5vw;
+  font-size: 1.3rem;
   border-radius: 50px;
   display: flex;
   align-items: center;
@@ -1355,8 +1368,8 @@ html.lenis body {
 }
 
 .first_line_child:hover .amount_container {
-  width: 100%;
-  height: 100%;
+  width: 300px !important;
+  height: 100% !important;
   border-radius: 50px;
   background-color: white;
   background-image: url(/assets/amount_hover_gif.gif);
@@ -1368,7 +1381,7 @@ html.lenis body {
 
 @media (max-width: 1120px) {
   .second_line_animation {
-    top: 45%;
+    /* top: 45%; */
     left: -5%;
     animation: leftAnimation 10s linear infinite;
   }
@@ -1379,7 +1392,7 @@ html.lenis body {
 
 @media (max-width: 940px) {
   .second_line_animation {
-    top: 44%;
+    /* top: 44%; */
     left: -5%;
     animation: leftAnimation 10s linear infinite;
   }
@@ -1390,16 +1403,13 @@ html.lenis body {
     display: flex;
     gap: 2vw;
     width: 300vw;
-    margin: 20px 0;
-    position: absolute;
   }
   .first_line_child:hover .amount {
-    transform: scale(1.8);
+    transform: scale(1.5);
   }
   .amount_container {
     width: 100px;
     height: 40px;
-    font-size: 2.5vw;
   }
 }
 
@@ -1410,8 +1420,6 @@ html.lenis body {
     display: flex;
     gap: 2vw;
     width: 350vw;
-    margin: 20px 0;
-    position: absolute;
   }
   .first_line_child:hover .amount {
     transform: scale(1.5);
@@ -1419,7 +1427,6 @@ html.lenis body {
   .amount_container {
     width: 100px;
     height: 40px;
-    font-size: 2.5vw;
   }
   .name {
     font-size: 15px;
@@ -1435,12 +1442,12 @@ html.lenis body {
     font-size: 4vw;
   }
   .second_line_animation {
-    top: 40%;
+    /* top: 40%; */
     left: -5%;
   }
 
   .third_line_animation {
-    top: 65%;
+    /* top: 65%; */
     left: -45%;
   }
 
@@ -1448,13 +1455,11 @@ html.lenis body {
   .second_line_animation,
   .third_line_animation {
     width: 400vw;
-    margin: 20px 0;
   }
 
   .amount_container {
     width: 100px;
     height: 40px;
-    font-size: 2.5vw;
   }
   .name {
     font-size: 15px;
@@ -1474,12 +1479,12 @@ html.lenis body {
     font-size: 5.5vw;
   }
   .second_line_animation {
-    top: 54%;
+    /* top: 54%; */
     left: -5%;
   }
 
   .third_line_animation {
-    top: 72%;
+    /* top: 72%; */
     left: -45%;
   }
 
@@ -1487,12 +1492,10 @@ html.lenis body {
   .second_line_animation,
   .third_line_animation {
     width: 450vw;
-    margin: 20px 0;
   }
   .amount_container {
     width: 100px;
     height: 40px;
-    font-size: 2vw;
   }
   .name {
     font-size: 15px;
@@ -1505,7 +1508,6 @@ html.lenis body {
   .amount_container {
     width: 80px;
     height: 40px;
-    font-size: 3vw;
   }
 }
 @media (max-width: 460px) {
@@ -1517,16 +1519,13 @@ html.lenis body {
     padding: 20px 70px;
     margin-bottom: 5px;
   }
-  .people_earning_heading {
-    font-size: 6.5vw;
-  }
   .second_line_animation {
-    top: 56%;
+    /* top: 56%; */
     left: -5%;
   }
 
   .third_line_animation {
-    top: 75%;
+    /* top: 75%; */
     left: -45%;
   }
 
@@ -1534,12 +1533,10 @@ html.lenis body {
   .second_line_animation,
   .third_line_animation {
     width: 550vw;
-    margin: 20px 0;
   }
   .amount_container {
     width: 100px;
     height: 40px;
-    font-size: 3.5vw;
   }
 
   .name_profile_container {
@@ -1589,12 +1586,12 @@ html.lenis body {
     font-size: 6.5vw;
   }
   .second_line_animation {
-    top: 54%;
+    /* top: 54%; */
     left: -5%;
   }
 
   .third_line_animation {
-    top: 75%;
+    /* top: 75%; */
     left: -45%;
   }
 
@@ -1602,12 +1599,10 @@ html.lenis body {
   .second_line_animation,
   .third_line_animation {
     width: 700vw;
-    margin: 20px 0;
   }
   .amount_container {
     width: 90px;
     height: 40px;
-    font-size: 4vw;
   }
 }
 
