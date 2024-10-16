@@ -782,6 +782,338 @@ html.lenis body {
   }
 }
 
+/* Form Section */
+.black-shadow {
+  position: fixed;
+  /* background-color: rgba(0, 0, 0, 0.2196078431); */
+  height: 100vh;
+  width: 98%;
+  z-index: 1;
+  transform: scale(1);
+  transition: all 0.3s;
+  top: 0;
+}
+.form-box ul {
+  list-style: none;
+}
+.form-box {
+  position: relative;
+  width: 470px;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0px 7px 21.2px 0px rgba(0, 0, 0, 0.1019607843);
+  z-index: 1;
+}
+.form-box span {
+  color: #111f3c;
+}
+.form-box form .input-box {
+  position: relative;
+  padding-top: 20px;
+}
+.form-box form .input-box label {
+  cursor: pointer;
+  padding: 4px 10px;
+  font-size: 18px;
+  border-bottom: 1px solid #606266;
+  color: #a8a9a9;
+}
+.form-box form .input-box label i {
+  transition: all 0.3s;
+  color: #a8a9a9;
+}
+.form-box form .input-box label.active i {
+  transform: rotate(180deg);
+}
+.form-box form .input-box input {
+  outline: none;
+  border: 1px solid #999999;
+  border-radius: 5px;
+  padding: 8px 10px;
+  width: 100%;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+.form-box form .input-box input:not(:-moz-placeholder-shown) + label {
+  top: 7px;
+}
+.form-box form .input-box input:focus + label,
+.form-box form .input-box input:not(:placeholder-shown) + label {
+  top: 7px;
+}
+.form-box form .input-box label[for="label_placeholder"] {
+  color: #a8a9a9;
+  position: absolute;
+  top: 29px;
+  left: 10px;
+  padding: 0px 3px;
+  pointer-events: none;
+  transition: 0.2s ease all;
+  border: 0;
+  background-color: white;
+  font-size: 16px;
+}
+.form-box form .input-box label[for="label_placeholder_mobile"] {
+  color: #a8a9a9;
+  position: absolute;
+  top: 29px;
+  left: 70px;
+  padding: 0px 3px;
+  pointer-events: none;
+  transition: 0.2s ease all;
+  border: 0;
+  background-color: white;
+  font-size: 16px;
+}
+.form-box form .input-box select {
+  border: 1px solid #999999;
+  border-radius: 5px 0px 0px 5px;
+  padding: 5px;
+  outline: none;
+  font-size: 16px;
+}
+.form-box form .input-box input[type="number"] {
+  padding-left: 10px;
+  border-radius: 0px 5px 5px 0;
+  border-left: 0;
+}
+.form-box form .input-box input[type="number"]::-webkit-outer-spin-button,
+.form-box form .input-box input[type="number"]::-webkit-inner-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+}
+.form-box form .input-box .property-type-dropdown label[for="propertyType"] {
+  cursor: pointer;
+  padding: 12.5px 10px;
+  border: 1px solid #999999;
+  border-radius: 5px;
+  color: #a8a9a9;
+  height: 40px;
+}
+.form-box
+  form
+  .input-box
+  .property-type-dropdown
+  label[for="propertyType"]
+  label[for="label_placeholder"] {
+  top: 27px;
+}
+.form-box form .input-box .property-type-dropdown label[for="propertyType"] p {
+  font-size: 16px;
+}
+.form-box form .input-box .property-type-dropdown label[for="propertyType"] i {
+  transition: all 0.3s;
+  color: #999999;
+  font-size: 14px;
+}
+.form-box
+  form
+  .input-box
+  .property-type-dropdown
+  label[for="propertyType"].active
+  i {
+  transform: rotate(180deg);
+}
+.form-box form .input-box .property-type-dropdown .propertyType-list {
+  height: 0px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.form-box form .input-box .property-type-dropdown .propertyType-list ul {
+  padding: 5px 10px 0px;
+}
+.form-box form .input-box .property-type-dropdown .propertyType-list ul li {
+  border: 1px solid #606266;
+  padding: 7px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 5px;
+}
+.form-box form .input-box label[for="budget"] {
+  cursor: pointer;
+  padding: 12.5px 10px;
+  border: 1px solid #999999;
+  border-radius: 5px;
+  color: #a8a9a9;
+  height: 40px;
+}
+.form-box form .input-box label[for="budget"] label[for="label_placeholder"] {
+  top: 27px;
+}
+.form-box form .input-box label[for="budget"] p {
+  font-size: 16px;
+}
+.form-box form .input-box label[for="budget"] i {
+  transition: all 0.3s;
+  color: #999999;
+  font-size: 14px;
+}
+.form-box form .input-box label[for="budget"].active i {
+  transform: rotate(180deg);
+}
+.form-box form .input-box .budget-dropdown {
+  height: 0px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.form-box form .input-box .budget-dropdown .budget-range {
+  position: relative;
+}
+.form-box form .input-box .budget-dropdown .budget-range input[type="range"] {
+  padding: 4px 0px;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  position: absolute;
+  left: 0;
+  margin: 20px 0px;
+}
+.form-box
+  form
+  .input-box
+  .budget-dropdown
+  .budget-range
+  input[type="range"]::-webkit-slider-runnable-track {
+  background: #606266;
+  height: 1px;
+}
+.form-box
+  form
+  .input-box
+  .budget-dropdown
+  .budget-range
+  input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  border: 3px solid #111f3c;
+  cursor: pointer;
+  position: relative;
+  top: -11.5px;
+  z-index: 99;
+  background-color: #fff;
+}
+.form-box form .input-box .budget-dropdown .budget-indicator span {
+  position: relative;
+}
+
+.form-box form .input-box .budget-dropdown .budget-indicator .amount {
+  margin-left: 20px;
+}
+
+.form-box
+  form
+  .input-box
+  .budget-dropdown
+  .budget-indicator
+  div:first-child
+  span::before {
+  left: 0px;
+}
+
+.form-box
+  form
+  .input-box
+  .budget-dropdown
+  .budget-indicator
+  div:last-child
+  span::before {
+  left: 25px;
+}
+
+.form-box form .input-box .budget-dropdown .budget-indicator span::before {
+  position: absolute;
+  content: "|";
+  box-sizing: border-box;
+  top: -25px;
+  left: 8px;
+}
+.form-box form .term-condition {
+  padding-top: 30px;
+}
+.form-box form .term-condition input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+.form-box form .term-condition p {
+  color: #111f3c;
+}
+.form-box form button {
+  margin-top: 30px;
+  width: 100%;
+  background-color: #111f3c;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px;
+  outline: none;
+}
+.form-box form button:disabled {
+  background-color: #d9d9d9;
+}
+.form-box .great-msg,
+.form-box .expert-great-msg,
+.form-box .consultation-great-msg {
+  border-radius: 12px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  z-index: 99;
+}
+.form-box .great-msg .video video,
+.form-box .expert-great-msg .video video,
+.form-box .consultation-great-msg .video video {
+  border-radius: 12px;
+}
+.form-box .great-msg .video .msg.hidden,
+.form-box .expert-great-msg .video .msg.hidden,
+.form-box .consultation-great-msg .video .msg.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+
+.expert-talk-form {
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 80px 15px;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.799);
+  display: block;
+  transform: scale(0);
+  padding-top: 120px;
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.expert-talk-form.show {
+  transform: scale(1);
+}
+
+.expert-talk-form .close-icon {
+  position: absolute;
+  z-index: 100;
+  right: 25px;
+  top: 25px;
+}
+
+.expert-talk-form .close-icon i {
+  color: white;
+  cursor: pointer;
+}
+
 /* General Styles */
 .mobile_section {
   background-image: url(./assets/Frame\ 56.png);

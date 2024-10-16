@@ -67,7 +67,7 @@
                         Just a few clicks to Big Rewards refer now and watch your earnings grow!
                     </p>
                 </div>
-                <button class="refer_button">
+                <button id="expertTalk" class="refer_button">
                     Refer
                 </button>
             </div>
@@ -79,6 +79,121 @@
             </div>
         </div>
     </section>
+
+    <!-- expert-talk-form start -->
+    <section class="expert-talk-form position-fixed">
+        <div class="black-shadow" id="expertcls"></div>
+        <div class="close-icon d-flex justify-content-end">
+            <img src="./assets/cross.png" width="18px" alt="Cross icon">
+        </div>
+        <div class="container m-auto">
+            <div class="row">
+                <div class="form-box bg-white m-auto position-relative">
+                    <span class="fw-normal fs-5">Please share your details</span>
+                    <form action="" id="expertForm">
+                        <div class="input-box">
+                            <input type="text" id="expertName" placeholder="" required>
+                            <label for="label_placeholder">Name</label>
+                        </div>
+                        <div class="input-box d-flex">
+                            <select name="" id="expertCode" required>
+                                <option value="+91">+91</option>
+                                <option value="+01">+01</option>
+                                <option value="+55">+55</option>
+                            </select>
+                            <input type="number" placeholder="" required id="expertNumber">
+                            <label for="label_placeholder_mobile">Enter mobile number</label>
+                        </div>
+                        <!-- <div class="input-box">
+                            <input type="email" placeholder="" required id="expertEmail">
+                            <label for="label_placeholder">Email ID</label>
+                        </div> -->
+                        <div class="input-box">
+                            <div class="property-type-dropdown">
+                                <label for="propertyType" class="d-flex justify-content-between align-items-center">
+                                    <p class="m-0" id="property-expert"></p>
+                                    <i class="fa-solid fa-angle-down"></i>
+                                    <label for="label_placeholder">Property Type</label>
+                                </label>
+                                <div class="propertyType-list">
+                                    <ul class="d-flex flex-wrap m-0">
+                                        <li class="text-capitalize">Apartment</li>
+                                        <li class="text-capitalize">Duplex</li>
+                                        <li class="text-capitalize">Penthouse</li>
+                                        <li class="text-capitalize">Villa</li>
+                                        <li class="text-capitalize">Studio</li>
+                                        <li class="text-capitalize">Independent House</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <label for="budget" class="d-flex justify-content-between align-items-center">
+                                <!-- <p class="m-0" id="property"></p> -->
+                                <i class="fa-solid fa-angle-down"></i>
+                                <label for="label_placeholder">Budget</label>
+                            </label>
+                            <div class="budget-dropdown">
+                                <div class="min-max-value d-flex justify-content-between pt-2">
+                                    <span class="d-block" id="minValue">Rs.1 Lakh</span>
+                                    <span class="d-block" id="maxValue">Rs.2cr+</span>
+                                </div>
+                                <div class="budget-range">
+                                    <input type="range" id="minBudgetRange" min="0" max="20000000" value="0"
+                                        step="10000">
+                                    <input type="range" id="maxBudgetRange" min="0" max="20000000" value="20000000"
+                                        step="10000">
+                                </div>
+                                <div class="budget-indicator pt-5 d-flex justify-content-between ps-2 pe-2">
+                                    <div>
+                                        <span>1Lakh</span>
+                                    </div>
+                                    <div class="amount">
+                                        <span>40L</span>
+                                    </div>
+                                    <div class="amount">
+                                        <span>70L</span>
+                                    </div>
+                                    <div class="amount">
+                                        <span>1Cr</span>
+                                    </div>
+                                    <div class="amount">
+                                        <span>1.3Cr</span>
+                                    </div>
+                                    <div class="amount">
+                                        <span>1.7Cr</span>
+                                    </div>
+                                    <div>
+                                        <span>2Cr+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="term-condition d-flex align-items-center">
+                            <input type="checkbox" id="expertCondition" required>
+                            <p class="m-0 fw-normal ps-2">By submitting this form, I agree to accept and agree to
+                                Realezi’s T&C</p>
+                        </div>
+                        <button type="submit" id="ExpertDetailBtn" class="text-capitalize text-center"
+                            disabled>Submit</button>
+                    </form>
+                    <div class="expert-great-msg position-absolute top-0 start-0 bg-white">
+                        <div class="video">
+                            <video src="assets/video/form-msg.mp4" width="100%" muted autoplay playsinline
+                                id="expert-video"></video>
+                            <div class="msg text-center hidden" id="expert-msg">
+                                <h3 class="fs-3 m-0" style="color: #EC7100;">Great!</h3>
+                                <p class="m-0 pt-2" style="color: #434343;">You have referred successfully. Kindly check
+                                    your<br> dashboard to track the status for the same.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- expert-talk-form end -->
 
     <section class="mobile_section" id="mobile-section">
         <div class="how_it_works_heading_container">
@@ -774,6 +889,7 @@
     <script src="https://unpkg.com/@rive-app/canvas@2.9.1"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./formValidation.js"></script>
     <script>
         const lenis = new Lenis()
 
